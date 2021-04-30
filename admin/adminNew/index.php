@@ -8,7 +8,7 @@ if(isset($_GET['logout']))
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
 <head>
-<title>Vegefoods - Admin Portal</title>
+<title>Online Shopping - Seller Portal</title>
 <link rel="stylesheet" href="../styles/adminstyles.css" media="all"></link>
 <div style="background: #36c5d8; color: white; border-radius: 5px; width: 250px;position:absolute;left: 40%;top:20%;">
     <div style="border-top-left-radius: 5px; border-top-right-radius: 5px; background: rgba(255,255,255,0.4); padding: 5px; font-weight: bold; text-align: center; color: black;">Login</div>
@@ -24,7 +24,9 @@ if(isset($_GET['logout']))
 	   </tr>
 		</table>
       </form>
-	  <a href="index_signup.php">Register</a>
+	  <span class="align-center">
+	  <a text-align="center" href="index_signup.php">Register</a>
+	  </span>
     </div>
   </div>
   </head>

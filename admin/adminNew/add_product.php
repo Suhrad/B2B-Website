@@ -9,8 +9,10 @@ if(isset($_POST['submit']))
 $product_name=$_POST['product_name'];
 $details=$_POST['details'];
 $price=$_POST['price'];
-$c_price=$_POST['c_price'];
 $product_type=$_POST['product_type'];
+$dealer=$_POST['dealer'];
+$mobile=$_POST['mobile'];
+$address=$_POST['address'];
 $brand=$_POST['brand'];
 $tags=$_POST['tags'];
 
@@ -22,14 +24,17 @@ $picture_size=$_FILES['picture']['size'];
 
 if($picture_type=="image/jpeg" || $picture_type=="image/jpg" || $picture_type=="image/png" || $picture_type=="image/gif")
 {
-	if($picture_size<=50000000)
-	
+	if($picture_size<=500000000)
 		$pic_name=time()."_".$picture_name;
-		move_uploaded_file($picture_tmp_name,"../product_images/".$pic_name);
-		
-mysqli_query($con,"insert into products (product_cat, product_brand,product_title,product_price, product_desc, product_image,product_keywords) values ('$product_type','$brand','$product_name','$price','$details','$pic_name','$tags')") or die ("query incorrect");
+		move_uploaded_file($picture_tmp_name,"C:/wamp64/www/B2B-Website/img/product_images".$pic_name);
 
- header("location: sumit_form.php?success=1");
+mysqli_query($con,"INSERT INTO products (product_cat, product_brand,product_dealer,dealer_mobile,dealer_address,product_title,product_price, product_desc, product_image,product_keywords) 
+VALUES ('$product_type','$brand','$dealer','$mobile','$address','$product_name','$price','$details','$pic_name','$tags')") or die ("query incorrect");
+
+//INSERT INTO `products`(`product_cat`, `product_brand`, `product_dealer`, `dealer_mobile`, `dealer_address`, `product_title`, `product_price`, `product_desc`, `product_image`, `product_keywords`)
+ //VALUES ([value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8],[value-9],[value-10],[value-11])
+
+header("location:index.php?success=1");
 }
 
 mysqli_close($con);
@@ -85,8 +90,17 @@ mysqli_close($con);
 <p>Product type</p>
 <input type="number" name="product_type" id="product_type" class="form-control" placeholder="1 electronic,2 Ladies Wears,3 Mens Wear">
 <br>
+<p>Company name</p>
+<input type="text" name="dealer" id="dealer" class="form-control" placeholder="online Traders">
+<br>
+<p>Moblie number</p>
+<input type="number" name="mobile" id="mobile" class="form-control" placeholder="9856457829">
+<br>
+<p>Dealer Address</p>
+<input type="text" name="address" id="address" class="form-control" placeholder="">
+<br>
 <p>Vendor / Brand</p>
-<input type="number" name="brand" id="brand" class="form-control" placeholder="1 HP,2 Samsung,3 Apple,4 motorolla">
+<input type="text" name="brand" id="brand" class="form-control" placeholder=" HP, Samsung, Apple, motorolla">
 <br>
 <p>Other tags</p>
 <input type="text" name="tags" id="tags" class="form-control" placeholder="Summer, Soft, Cotton etc">
