@@ -138,7 +138,7 @@ include "header.php";
 								<a class="review-link" href="#review-form">10 Review(s) | Add your review</a>
 							</div>
 							<div>
-								<h3 class="product-price">$'.$row['product_price'].'<del class="product-old-price">$990.00</del></h3>
+								<h3 class="product-price">Rs.'.$row['product_price'].'</h3>
 								<span class="product-available">In Stock</span>
 							</div>
 							<p>'.$row['product_desc'].'</p>
@@ -195,9 +195,7 @@ include "header.php";
 
 						</div>
 					</div>
-									
-					
-					<!-- /Product main img -->
+				    <!-- /Product main img -->
 
 					<!-- Product thumb imgs -->
 					
@@ -215,7 +213,7 @@ include "header.php";
 							<!-- product tab nav -->
 							<ul class="tab-nav">
 								<li class="active"><a data-toggle="tab" href="#tab1">Description</a></li>
-								<li><a data-toggle="tab" href="#tab2">Details</a></li>
+								<li><a data-toggle="tab" href="#tab2">Dealer Details</a></li>
 								<li><a data-toggle="tab" href="#tab3">Reviews (3)</a></li>
 							</ul>
 							<!-- /product tab nav -->
@@ -225,9 +223,9 @@ include "header.php";
 								<!-- tab1  -->
 								<div id="tab1" class="tab-pane fade in active">
 									<div class="row">
-										<div class="col-md-12">
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-										</div>
+									<div class="col-md-12">
+									<h4>'.$row['product_keywords'].'</h4>
+									</div>
 									</div>
 								</div>
 								<!-- /tab1  -->
@@ -236,7 +234,17 @@ include "header.php";
 								<div id="tab2" class="tab-pane fade in">
 									<div class="row">
 										<div class="col-md-12">
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+										<div class=center>
+										<h4>Dealer:</h4>
+					<h4>'.$row['product_dealer'].'</h4>
+					<h4>Mobile Number: </h4>
+					<h5>'.$row['dealer_mobile'].'</h5>
+					<h4>Dealer Address: </h4>
+					<h5>'.$row['dealer_address'].'</h5>
+					
+
+										
+										</div>
 										</div>
 									</div>
 								</div>

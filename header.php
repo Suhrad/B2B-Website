@@ -121,11 +121,6 @@ session_start();
 			<!-- TOP HEADER -->
 			<div id="top-header">
 				<div class="container">
-					<ul class="header-links pull-left">
-						<li><a href="#"><i class="fa fa-phone"></i> +91-9535688928</a></li>
-						<li><a href="#"><i class="fa fa-envelope-o"></i> puneethreddy951@gmail.com</a></li>
-						<li><a href="#"><i class="fa fa-map-marker"></i>Bangalore</a></li>
-					</ul>
 					<ul class="header-links pull-right">
 						<li><a href="#"><i class="fa fa-inr"></i> INR</a></li>
 						<li><?php
@@ -177,7 +172,7 @@ session_start();
 						<!-- LOGO -->
 						<div class="col-md-3">
 							<div class="header-logo">
-								<a href="#" class="logo">
+								<a href="index.php" class="logo">
 								<font style="font-style:normal; font-size: 33px;color: aliceblue;font-family: serif">
                                         Online Shop
                                     </font>
@@ -206,16 +201,7 @@ session_start();
 						<!-- ACCOUNT -->
 						<div class="col-md-3 clearfix">
 							<div class="header-ctn">
-								<!-- Wishlist -->
-								<div>
-									<a href="https://github.com/puneethreddyhc">
-										<i class="fa fa-github"></i>
-										<span>Github</span>
-										
-									</a>
-								</div>
-								<!-- /Wishlist -->
-
+						
 								<!-- Cart -->
 								<div class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
